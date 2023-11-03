@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uts_mobile/content.dart';
 import 'package:uts_mobile/home.dart';
-// import 'package:coba_uts/history.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -40,17 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int index = 0;
   final screens = [
     HomePage(),
-    // SplashHome(),
+    Add(),
     Add(),
     Add(),
     Add(),
   ];
 
-  List<ImageProvider> itemImage = [
-    NetworkImage("https://review1st.com/wp-content/uploads/2021/09/ezgif-7-fcaf2a960276.jpg"),
-    NetworkImage("https://blog.indogold.id/wp-content/uploads/2022/09/Link-Aja-BANNER-1.jpg"),
-    NetworkImage("https://cdn.linkaja.com/website/posts/May2022/1653372317-WEB%20BANNER%20794x366%20(50).jpg"),
-  ];
   int currentIndex = 0;
 
   @override
