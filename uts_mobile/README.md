@@ -12,6 +12,11 @@ A few resources to get you started if this is your first Flutter project:
 
 ![image](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/05ea721c-d4d6-4ce4-b01c-3474caccbb20)
 
+**PREVIEW - PROGRESS 3**
+
+![mobile](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/1777c06c-8555-4c82-a7a6-29e9bf8e5de0)
+
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
