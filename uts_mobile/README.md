@@ -14,7 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 
 **PREVIEW - PROGRESS 3**
 
-![mobile](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/1777c06c-8555-4c82-a7a6-29e9bf8e5de0)
+
+![mobile (1)](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/3a25c169-474b-4071-9589-0ade31163a16)
 
 
 
