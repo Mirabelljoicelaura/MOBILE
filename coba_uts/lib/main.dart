@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uts_mobile/content.dart';
-import 'package:uts_mobile/home.dart';
+import 'package:coba_uts/add.dart';
+import 'package:coba_uts/home_page.dart';
 // import 'package:coba_uts/history.dart';
 
 
