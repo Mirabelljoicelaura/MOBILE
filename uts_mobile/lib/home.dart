@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+final List<String> imageAssetPaths = [
+  'images/banner1.jpg',
+  'images/banner2.png',
+  'images/banner4.jpg'
+];
   @override
   Widget build(BuildContext context) {
 
@@ -16,7 +21,7 @@ class HomePage extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment:
-                  CrossAxisAlignment.start, // Left-align the icons
+                  CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,27 +29,27 @@ class HomePage extends StatelessWidget {
                     CustomIcon(
                       imageUrl:
                           'images/linkaja.png',
-                      width: 50,
-                      height: 50,
+                      width: 70,
+                      height: 70,
                     ),
                     Spacer(),
                     Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0)),
+                            borderRadius: BorderRadius.circular(8.0)),
                         padding: EdgeInsets.all(9),
                         child: CustomIcon(
                           imageUrl:
                               'images/icon1.png',
-                          width: 22,
-                          height: 22,
+                          width: 24,
+                          height: 24,
                         )),
-                    SizedBox(width: 10), // Sesuaikan lebar sesuai kebutuhan
+                    SizedBox(width: 10), 
 
                     Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0)),
+                            borderRadius: BorderRadius.circular(8.0)),
                         padding: EdgeInsets.all(10),
                         child: CustomIcon(
                           imageUrl:
@@ -61,20 +66,19 @@ class HomePage extends StatelessWidget {
           Column(
             children: [
               Container(
-                margin:
-                    EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 5),
-                width: MediaQuery.of(context).size.width,
-                height: 150,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      const Color.fromARGB(255, 230, 48, 35),
-                      Color.fromARGB(255, 202, 36, 24),
-                      Color.fromARGB(255, 190, 32, 21),
-                      Color.fromARGB(255, 159, 25, 16),
-                    ],
+                margin:EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 5),
+                    width: MediaQuery.of(context).size.width,
+                    height: 150,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          const Color.fromARGB(255, 230, 48, 35),
+                          Color.fromARGB(255, 202, 36, 24),
+                          Color.fromARGB(255, 190, 32, 21),
+                          Color.fromARGB(255, 159, 25, 16),
+                        ],
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -134,19 +138,19 @@ class HomePage extends StatelessWidget {
                                         ),
                                         SizedBox(width: 8),
                                         Container(
-                                          width: 20, // Lebar lingkaran ikon
-                                          height: 20, // Tinggi lingkaran ikon
+                                          width: 20, 
+                                          height: 20, 
                                           decoration: BoxDecoration(
                                             color: Colors
-                                                .red, // Warna latar belakang lingkaran
+                                                .red,
                                             shape: BoxShape
                                                 .circle, // Mengatur bentuk latar belakang menjadi lingkaran
                                           ),
                                           child: Center(
                                             child: Icon(
                                               Icons.arrow_forward,
-                                              color: Colors.white, // Warna ikon
-                                              size: 10, // Ukuran ikon
+                                              color: Colors.white, 
+                                              size: 10, 
                                             ),
                                           ),
                                         ),
@@ -234,7 +238,10 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                 
+                  border: Border.all(
+                  color: Color.fromARGB(255, 211, 209, 209), 
+                  width: 0.5, 
+                ),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -247,9 +254,9 @@ class HomePage extends StatelessWidget {
                         Column(
                           children: [
                          Icon(
-                              Icons.monetization_on_outlined,
+                              Icons.attach_money_outlined,
                               color: Colors.black,
-                              size: 30,
+                              size: 26,
                             ),
                             Text(
                               'Top Up',
@@ -264,9 +271,9 @@ class HomePage extends StatelessWidget {
                         Column(
                           children: [
                              Icon(
-                              Icons.currency_exchange_outlined,
+                              Icons.account_balance,
                               color: Colors.black,
-                              size: 30,
+                              size: 26,
                             ),
                             Text(
                               'Send Money',
@@ -282,7 +289,7 @@ class HomePage extends StatelessWidget {
                              Icon(
                               Icons.airplane_ticket_outlined,
                               color: Colors.black,
-                              size: 30,
+                              size: 26,
                             ),
                             Text(
                               'Ticket Code',
@@ -298,7 +305,7 @@ class HomePage extends StatelessWidget {
                              Icon(
                               Icons.widgets_outlined,
                               color: Colors.black,
-                              size: 30,
+                              size: 26,
                             ),
                             Text(
                               'See All',
@@ -314,6 +321,162 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              Container(
+                margin: EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 0),
+                width: MediaQuery.of(context).size.width,
+                height: 175, 
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround, 
+                      children: [
+                        Column(
+                          children: [
+                            Icon(
+                              Icons.phone_android,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'Pulsa/Data',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                             Icon(
+                              Icons.bolt,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'Electricity',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                             Icon(
+                              Icons.event_note,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'BPJS',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                             Icon(
+                              Icons.sports_esports,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'mgames',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment
+                          .spaceAround, 
+                      children: [
+                        Column(
+                          children: [
+                         Icon(
+                              Icons.rss_feed_rounded,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'Cable TV & \n Internet',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                             Icon(
+                              Icons.water_drop,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'PDAM',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                             Icon(
+                              Icons.add_card,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'Kartu Uang \nElektronik',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                             Icon(
+                              Icons.more_horiz,
+                              color: Colors.blue,
+                              size: 30,
+                            ),
+                            Text(
+                              'More',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  
+                  ],
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
+                child: CarouselWithDots(imageAssetPaths: imageAssetPaths), // Ganti parameter dengan imageAssetPaths jika Anda menggunakan AssetImage
+              )
+
             ],
           ),
         ],
@@ -341,10 +504,73 @@ class CustomIcon extends StatelessWidget {
       },
       child: Image.network(
         imageUrl,
-        width: width, // Gunakan properti width
-        height: height, // Gunakan properti height
+        width: width,
+        height: height,
       ),
     );
   }
 }
 
+class CarouselWithDots extends StatefulWidget {
+  final List<String> imageAssetPaths;
+
+  CarouselWithDots({required this.imageAssetPaths});
+
+  @override
+  _CarouselWithDotsState createState() => _CarouselWithDotsState();
+}
+
+class _CarouselWithDotsState extends State<CarouselWithDots> {
+  int _current = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CarouselSlider(
+          options: CarouselOptions(
+            height: 140,
+            autoPlay: true,
+            autoPlayInterval: Duration(seconds: 1),
+            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            autoPlayCurve: Curves.fastOutSlowIn,
+            onPageChanged: (index, reason) {
+              setState(() {
+                _current = index;
+              });
+            },
+          ),
+          items: widget.imageAssetPaths.map((assetPath) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: EdgeInsets.symmetric(horizontal: 9.0, vertical: 15.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(assetPath, fit: BoxFit.cover), // Menggunakan AssetImage
+                  ),
+                );
+              },
+            );
+          }).toList(),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: widget.imageAssetPaths.map((assetPath) {
+            int index = widget.imageAssetPaths.indexOf(assetPath);
+            return Container(
+              width: 8.0,
+              height: 8.0,
+              margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: _current == index ? Colors.red : Colors.grey,
+              ),
+            );
+          }).toList(),
+        ),
+      ],
+    );
+  }
+}

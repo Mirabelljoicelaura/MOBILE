@@ -7,7 +7,7 @@ class Add extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Add"),
+        child: Text("Konten Belum Dimasukkan"),
       ),
     );
   }
