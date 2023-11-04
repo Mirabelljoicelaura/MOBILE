@@ -15,13 +15,20 @@ final List<String> imageAssetPaths = [
       backgroundColor: Color.fromARGB(255, 245, 249, 252),
       body: ListView(
         children: [
-          Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
+         Container(
+             padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/back_nav.png'),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                      Colors.grey, 
+                      BlendMode.saturation, 
+                    ),
+                  ),
             ),
             child: Column(
-              crossAxisAlignment:
-                  CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,18 +41,18 @@ final List<String> imageAssetPaths = [
                     ),
                     Spacer(),
                     Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8.0)),
-                        padding: EdgeInsets.all(9),
-                        child: CustomIcon(
-                          imageUrl:
-                              'images/icon1.png',
-                          width: 24,
-                          height: 24,
-                        )),
-                    SizedBox(width: 10), 
-
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      padding: const EdgeInsets.all(9),
+                      child: Image.asset(
+                        'images/icon1.png', // The path to your image asset
+                        width: 24,
+                        height: 24,
+                      ),
+                    ),
+                    SizedBox(width: 8),
                     Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -138,19 +145,19 @@ final List<String> imageAssetPaths = [
                                         ),
                                         SizedBox(width: 8),
                                         Container(
-                                          width: 20, 
-                                          height: 20, 
+                                          width: 16, 
+                                          height: 15, 
                                           decoration: BoxDecoration(
                                             color: Colors
                                                 .red,
                                             shape: BoxShape
-                                                .circle, // Mengatur bentuk latar belakang menjadi lingkaran
+                                                .circle, 
                                           ),
                                           child: Center(
                                             child: Icon(
                                               Icons.arrow_forward,
                                               color: Colors.white, 
-                                              size: 10, 
+                                              size: 8, 
                                             ),
                                           ),
                                         ),
@@ -202,19 +209,19 @@ final List<String> imageAssetPaths = [
                                         ),
                                         SizedBox(width: 8),
                                         Container(
-                                          width: 20,
-                                          height: 20,
+                                          width: 15, 
+                                          height: 15, 
                                           decoration: BoxDecoration(
                                             color: Colors
-                                                .red, 
+                                                .red,
                                             shape: BoxShape
                                                 .circle, 
                                           ),
                                           child: Center(
                                             child: Icon(
                                               Icons.arrow_forward,
-                                              color: Colors.white, // Warna ikon
-                                              size: 10, // Ukuran ikon
+                                              color: Colors.white, 
+                                              size: 8, 
                                             ),
                                           ),
                                         ),

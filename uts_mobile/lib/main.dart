@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uts_mobile/content.dart';
 import 'package:uts_mobile/home.dart';
+import 'package:uts_mobile/history.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int index = 0;
   final screens = [
     HomePage(),
-    Add(),
+    History(),
     Add(),
     Add(),
     Add(),
