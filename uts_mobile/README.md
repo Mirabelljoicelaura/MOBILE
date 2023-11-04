@@ -16,7 +16,7 @@ A few resources to get you started if this is your first Flutter project:
 
 ![mobile (3)](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/e239077f-89bd-4e78-975b-e479dd8fbcd0)
 
-**TAMPILAN AKHIR**
+**FINAL DISPLAY**
 
 ![mobile](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/578fc19f-0a33-4875-988a-e01227fce55c)
 
