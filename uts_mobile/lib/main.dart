@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uts_mobile/content.dart';
 import 'package:uts_mobile/home.dart';
 import 'package:uts_mobile/history.dart';
+import 'package:uts_mobile/inbox.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
     HomePage(),
     History(),
     Add(),
-    Add(),
+    Inbox(),
     Add(),
   ];
 
