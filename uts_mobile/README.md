@@ -23,7 +23,7 @@ A few resources to get you started if this is your first Flutter project:
 
 **Penambahan Page Inbox**
 
-![mobile (4)](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/fc7add96-a45c-4465-9c67-cdd4e7ee04cf)
+![mobile (5)](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/77dbc781-f49b-4734-809a-be76416f4b58)
 
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
