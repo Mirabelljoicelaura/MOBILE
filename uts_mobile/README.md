@@ -21,6 +21,10 @@ A few resources to get you started if this is your first Flutter project:
 ![mobile](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/578fc19f-0a33-4875-988a-e01227fce55c)
 
 
+**Penambahan Page Inbox**
+
+![mobile (5)](https://github.com/Mirabelljoicelaura/MOBILE/assets/91585408/77dbc781-f49b-4734-809a-be76416f4b58)
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
