@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'input.dart';
+import 'result.dart';
+import 'convert.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -26,64 +29,32 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   double celciusValue = 0.0;
   double kelvinValue = 0.0;
   double reamurValue = 0.0;
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Konverter Suhu"),
       ),
-      body: SingleChildScrollView( 
+      body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(8),
           child: Column(
             children: [
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: 'Masukkan Suhu Dalam Celcius',
-                ),
-                keyboardType: TextInputType.number,
-                inputFormatters: <TextInputFormatter>[
-                  FilteringTextInputFormatter.digitsOnly,
-                ],
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Masukkan suhu terlebih dahulu';
-                  }
-                  return null;
-                },
-                onChanged: (value) {
+              InputWidget(
+                onValueChanged: (value) {
                   setState(() {
-                    celciusValue = double.tryParse(value) ?? 0.0;
+                    celciusValue = value;
                   });
                 },
               ),
               SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.only(top: 200),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        Text("Suhu Kelvin", style: TextStyle(fontSize: 14)),
-                        SizedBox(height: 20),
-                        Text("$kelvinValue", style: TextStyle(fontSize: 30)),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Text("Suhu Reamur", style: TextStyle(fontSize: 14)),
-                        SizedBox(height: 20),
-                        Text("$reamurValue", style: TextStyle(fontSize: 30)),
-                      ],
-                    ),
-                  ],
-                ),
+                child: ResultInput(kelvinValue: kelvinValue, reamurValue: reamurValue),
               ),
               SizedBox(height: 16),
                 Container(
@@ -95,19 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       reamurValue = celciusValue * 4 / 5;
                       setState(() {});
                     },
-                    child: Container(
-                      width: 300,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Konversi",
-                        style: TextStyle(fontSize: 18, color: Colors.white),
-                      ),
-                    ),
+                    child: ConvertWidget(),
                   ),
                 ),
 
@@ -118,3 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+
+
