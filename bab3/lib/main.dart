@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -25,6 +26,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
   double celciusValue = 0.0;
   double kelvinValue = 0.0;
   double reamurValue = 0.0;
@@ -94,8 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       setState(() {});
                     },
                     child: Container(
-                      width: 300, // Sesuaikan lebar sesuai keinginan
-                      height: 50, // Sesuaikan tinggi sesuai keinginan
+                      width: 300,
+                      height: 50,
                       decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(8),
